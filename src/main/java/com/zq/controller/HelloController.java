@@ -14,6 +14,7 @@ public class HelloController {
 
     @GetMapping(value = "/")
     public Image test() {
-        return baseService.test();
+        Image image = baseService.test();
+        return image;
     }
 }
