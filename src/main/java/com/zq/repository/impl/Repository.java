@@ -19,11 +19,11 @@ public class Repository<T,PK extends Serializable> implements BaseRepository<T,P
     }
 
     public T load(PK id) {
-        return (T)getCurrentSession().load(Image.class,id);
+        return (T)getCurrentSession().load(Object.class,id);
     }
 
     public T get(PK id) {
-        return null;
+        return (T)getCurrentSession().get(Object.class,id);
     }
 
     public List<T> findAll() {

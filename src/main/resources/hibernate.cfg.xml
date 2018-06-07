@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/py_storage</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.username">root</property>
+         <property name="connection.password">123456</property>
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <!-- 通过其mapping标签读取Hibernate实体类映射文件如Student.hbm.xml，然后根据其class标签找到Java实体类Student，然后就可以根据对Java实体类Student的操作映射到对数据库表Student的CRUD操作。 -->
+        <mapping class="com.zq.testge.GenDemoEntity"/>
+    </session-factory>
+</hibernate-configuration>
