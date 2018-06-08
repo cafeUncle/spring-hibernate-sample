@@ -44,8 +44,8 @@ public class ImageRepositoryImpl implements ImageRepository {
     }
 
     public void delete(Long id) {
-        Image person = load(id);
-        getCurrentSession().delete(person);
+        Image entity = load(id);
+        getCurrentSession().delete(entity);
     }
 
     public void flush() {
